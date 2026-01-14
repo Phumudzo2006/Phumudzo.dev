@@ -1,0 +1,481 @@
+/* =====================
+   Global Reset & Base
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: linear-gradient(180deg, #0b0f14, #121822);
+  color: #e5e7eb;
+  display: flex;
+}
+
+/* =====================
+   Sidebar
+===================== */
+#sidebar {
+  width: 260px;
+  background: #0f1623;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 2rem 1.5rem;
+  border-right: 1px solid #1f2937;
+}
+
+.sidebar-toggle {
+  display: none;
+}
+
+.sidebar-nav h1 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #38bdf8;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+}
+
+.sidebar-nav li {
+  margin-bottom: 1rem;
+}
+
+.sidebar-nav a {
+  color: #cbd5f5;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.sidebar-nav a:hover {
+  color: #38bdf8;
+}
+
+
+
+/* =====================
+   Main Layout
+===================== */
+main {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+}
+
+/* =====================
+   Sections
+===================== */
+section {
+  padding: 4rem 8%;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f1f5f9;
+}
+
+p {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+/* =====================
+   Hero
+===================== */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  max-width: 700px;
+}
+
+.availability {
+  margin-top: 1rem;
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+/* =====================
+   Services
+===================== */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: #0f172a;
+  padding: 1.5rem;
+  border-radius: 14px;
+  border: 1px solid #1e293b;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+}
+
+/* =====================
+   Buttons
+===================== */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.3rem;
+  background: #38bdf8;
+  color: #020617;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* =====================
+   Hire Form
+===================== */
+.hire-me-form {
+  margin-top: 3rem;
+  background: #0f172a;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid #1e293b;
+}
+
+.hire-me-form form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #1e293b;
+  background: #020617;
+  color: #f8fafc;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+/* =====================
+   Projects
+===================== */
+.projects-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #0f172a;
+  padding: 1.5rem;
+  border-radius: 14px;
+  border: 1px solid #1e293b;
+}
+
+.output-preview {
+  margin-top: 1rem;
+}
+
+.output-toggle {
+  background: none;
+  border: none;
+  color: #38bdf8;
+  cursor: pointer;
+}
+
+.output-content {
+  display: none;
+  background: #020617;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  overflow-x: auto;
+}
+
+/* =====================
+   Modal
+===================== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #020617;
+  padding: 2rem;
+  border-radius: 14px;
+  max-width: 800px;
+  width: 90%;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* =====================
+   Skills
+===================== */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.skill {
+  background: #1e293b;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+/* =====================
+   Floating CTA
+===================== */
+.floating-cta {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0f172a;
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  border: 1px solid #1e293b;
+  max-width: 300px;
+}
+
+#close-cta {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* =====================
+   Footer
+===================== */
+footer {
+  padding: 2rem;
+  text-align: center;
+  color: #64748b;
+  border-top: 1px solid #1e293b;
+}
+
+/* =====================
+   Responsive
+===================== */
+@media (max-width: 900px) {
+  #sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  section {
+    padding: 3rem 6%;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+}
+/* =====================
+   Collapsible Sidebar
+===================== */
+
+#sidebar {
+  transition: width 0.3s ease, transform 0.3s ease;
+}
+
+#sidebar.collapsed {
+  width: 70px;
+}
+
+#sidebar.collapsed .sidebar-nav h1,
+#sidebar.collapsed .sidebar-nav ul {
+  display: none;
+}
+
+.sidebar-toggle {
+  display: block;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #38bdf8;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+#sidebar.collapsed .sidebar-toggle {
+  transform: rotate(90deg);
+}
+
+main {
+  transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+#sidebar.collapsed + main {
+  margin-left: 70px;
+  width: calc(100% - 70px);
+}
+
+/* Mobile behavior */
+@media (max-width: 900px) {
+  #sidebar {
+    position: fixed;
+    transform: translateX(-100%);
+    width: 240px;
+    z-index: 1000;
+  }
+
+  #sidebar.open {
+    transform: translateX(0);
+  }
+
+  #sidebar.collapsed {
+    width: 240px;
+  }
+
+  main {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+/* =====================
+   CSS-only Sidebar Toggle
+===================== */
+
+/* Animate sidebar */
+#sidebar {
+  transition: width 0.35s ease, transform 0.35s ease;
+}
+
+/* Collapsed state */
+#sidebarToggle:checked ~ #sidebar {
+  width: 70px;
+}
+
+#sidebarToggle:checked ~ #sidebar .sidebar-nav h1,
+#sidebarToggle:checked ~ #sidebar .sidebar-nav ul {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar-toggle {
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #38bdf8;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+#sidebarToggle:checked + .sidebar-toggle {
+  transform: rotate(90deg);
+}
+
+/* Shift main content */
+#sidebarToggle:checked ~ main {
+  margin-left: 70px;
+  width: calc(100% - 70px);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  #sidebar {
+    position: fixed;
+    transform: translateX(-100%);
+    width: 240px;
+    z-index: 999;
+  }
+
+  #sidebarToggle:checked ~ #sidebar {
+    transform: translateX(0);
+    width: 240px;
+  }
+
+  #sidebarToggle:checked ~ main {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+
+
+#run-code textarea {
+  width: 100%;
+  background: #020617;
+  color: #f8fafc;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 1rem;
+  font-family: monospace;
+  margin: 1rem 0;
+}
+
+#outputBox {
+  background: #020617;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  min-height: 120px;
+  border: 1px solid #1e293b;
+  white-space: pre-wrap;
+}
+
+.typing-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  min-height: 2.5rem;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 4px;
+  animation: blink 1s infinite;
+  font-weight: 600;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}

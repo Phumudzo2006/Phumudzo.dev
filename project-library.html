@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qt-Based Library Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            background: #0b0f14;
+            color: #e5e7eb;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #1e293b;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 3px solid #38bdf8;
+        }
+
+        header h1 {
+            color: #38bdf8;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #cbd5e1;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            color: #38bdf8;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #38bdf8;
+            display: inline-block;
+            padding-bottom: 0.3rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            background: #38bdf8;
+            color: #0b0f14;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0ea5e9;
+            color: #f1f5f9;
+        }
+
+        pre {
+            background: #1e293b;
+            padding: 1rem;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Qt-Based Library Management System (C++)</h1>
+        <p>A full desktop GUI system for managing books, users, and loans using Qt framework.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Project Overview</h2>
+            <p>
+                This project is a desktop application built with C++ and Qt.
+                Users can add, borrow, return, and search books.
+                The system updates dynamically with a clean GUI.
+            </p>
+        </section>
+
+        <section>
+            <h2>Key Features</h2>
+            <ul>
+                <li>Add, edit, and delete books</li>
+                <li>Borrow and return books with status updates</li>
+                <li>Search for books by title or author</li>
+                <li>Dynamic GUI updates (book table, buttons, search results)</li>
+                <li>Built using Qt Widgets for desktop applications</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Sample Output</h2>
+            <pre>
+QT-BASED LIBRARY MANAGEMENT SYSTEM
+----------------------------------
+[Main Menu]
+1. Add Book
+2. Borrow Book
+3. Return Book
+4. Search Book
+5. View All Books
+
+> Adding Book: "Introduction to Algorithms"
+> Book added successfully.
+
+> Searching: "Algorithms"
+Found:
+ - Introduction to Algorithms | Status: Available
+
+> Borrowing book...
+Borrow Successful: Book is now marked as "Borrowed"
+
+GUI Status Updates:
+✔ Book Table Updated
+✔ Borrow/Return Buttons Enabled
+✔ Search Results Displayed
+
+Application Ready.
+            </pre>
+        </section>
+
+        <section>
+            <a href="index.html" class="btn">← Back to Portfolio</a>
+        </section>
+    </main>
+</body>
+</html>
