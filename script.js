@@ -1,45 +1,48 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   /* =====================
-     Sidebar Toggle
+     SIDEBAR TOGGLE (JS ONLY)
   ===================== */
   const sidebar = document.getElementById("sidebar");
-  const toggle = document.getElementById("sidebarToggle");
+  const menuBtn = document.getElementById("menuBtn");
 
-  if (toggle && sidebar) {
-    toggle.addEventListener("click", () => {
-      if (window.innerWidth <= 900) {
-        sidebar.classList.toggle("open");
+  if (menuBtn && sidebar) {
+    menuBtn.addEventListener("click", () => {
+      if (window.innerWidth < 1024) {
+        sidebar.classList.toggle("open");      // Mobile
       } else {
-        sidebar.classList.toggle("collapsed");
+        sidebar.classList.toggle("collapsed"); // Desktop
       }
+    });
+
+    // Close sidebar when clicking a link on mobile
+    document.querySelectorAll(".sidebar-nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth < 1024) {
+          sidebar.classList.remove("open");
+        }
+      });
     });
   }
 
-  // Close sidebar on mobile when clicking a link
-  document.querySelectorAll(".sidebar-nav a").forEach(link => {
-    link.addEventListener("click", () => {
-      if (window.innerWidth <= 900) {
-        sidebar.classList.remove("open");
-      }
-    });
-  });
-
   /* =====================
-     Output Preview Toggle
+     OUTPUT PREVIEW TOGGLE
   ===================== */
   document.querySelectorAll(".output-toggle").forEach(btn => {
     btn.addEventListener("click", () => {
       const pre = btn.nextElementSibling;
-      const isOpen = pre.style.display === "block";
+      if (!pre) return;
 
+      const isOpen = pre.style.display === "block";
       pre.style.display = isOpen ? "none" : "block";
-      btn.textContent = isOpen ? "▶ View Output Preview" : "▼ Hide Output Preview";
+      btn.textContent = isOpen
+        ? "▶ View Output Preview"
+        : "▼ Hide Output Preview";
     });
   });
 
   /* =====================
-     Modal for Full Output
+     MODAL FOR FULL OUTPUT
   ===================== */
   const modal = document.getElementById("output-modal");
   const modalText = document.getElementById("outputText");
@@ -47,24 +50,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".view-output").forEach(btn => {
     btn.addEventListener("click", () => {
-      const preview = btn.parentElement.querySelector(".output-content");
-      if (preview) {
+      const preview = btn.closest(".project-card")
+        ?.querySelector(".output-content");
+
+      if (preview && modal && modalText) {
         modalText.textContent = preview.textContent.trim();
         modal.style.display = "flex";
       }
     });
   });
 
-  if (closeModal) {
-    closeModal.addEventListener("click", () => modal.style.display = "none");
+  if (closeModal && modal) {
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", e => {
+      if (e.target === modal) modal.style.display = "none";
+    });
   }
 
-  window.addEventListener("click", e => {
-    if (e.target === modal) modal.style.display = "none";
-  });
-
   /* =====================
-     Floating CTA Close
+     FLOATING CTA CLOSE
   ===================== */
   const closeCTA = document.getElementById("close-cta");
   const cta = document.getElementById("floating-cta");
@@ -75,11 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-});
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
+  /* =====================
+     TYPING EFFECT (HERO)
+  ===================== */
   const texts = [
     "Welcome to Phumudzo.dev",
     "Building intelligent, reliable, and scalable web solutions.",
@@ -87,36 +92,33 @@ document.addEventListener("DOMContentLoaded", () => {
     "Turning ideas into functional software."
   ];
 
-  let count = 0;
+  const typingElement = document.querySelector(".typing-text");
+  if (!typingElement) return;
+
   let index = 0;
-  let currentText = "";
+  let charIndex = 0;
   let isDeleting = false;
 
-  function typeLoop() {
-    currentText = texts[count];
+  function typeEffect() {
+    const current = texts[index];
 
     if (!isDeleting) {
-      index++;
+      typingElement.textContent = current.slice(0, charIndex++);
+      if (charIndex > current.length) {
+        setTimeout(() => (isDeleting = true), 1500);
+      }
     } else {
-      index--;
+      typingElement.textContent = current.slice(0, charIndex--);
+      if (charIndex === 0) {
+        isDeleting = false;
+        index = (index + 1) % texts.length;
+      }
     }
 
-    const displayed = currentText.slice(0, index);
-    document.getElementById("typing").textContent = displayed;
-
-    let delay = isDeleting ? 40 : 80;
-
-    if (!isDeleting && index === currentText.length) {
-      delay = count === 0 ? 2500 : 1800;
-      isDeleting = true;
-    } else if (isDeleting && index === 0) {
-      isDeleting = false;
-      count = (count + 1) % texts.length;
-      delay = 500;
-    }
-
-    setTimeout(typeLoop, delay);
+    setTimeout(typeEffect, isDeleting ? 50 : 90);
   }
 
-  typeLoop();
+  typeEffect();
+
 });
+
