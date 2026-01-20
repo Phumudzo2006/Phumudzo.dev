@@ -1,355 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phumudzo.dev</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phumudzo.dev</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Phumudzo Matshaya – Mathematics & Computer Science student building C++ systems and modern web applications.">
+<meta name="theme-color" content="#0f172a">
+
 </head>
 <body>
+
+  
+
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <nav class="sidebar-nav">
+      <h1>Phumudzo.dev</h1>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main -->
+  <main>
+     <!-- header -->
+<header class="top-header">
+  <button id="menuToggle" class="menu-btn" aria-label="Open menu">
+  <span></span>
+  <span></span>
+</button>
+
+  <span class="site-title">Phumudzo.dev</span>
+</header>
+
+    <!-- Menu Button -->
+    <button class="sidebar-toggle" id="menuBtn">☰</button>
+
+    <!-- Hero -->
+    <section class="hero">
+      <h2 class="typing-text"></h2>
+      <p>Hello! I'm Phumudzo, a Mathematics & Computer Science student passionate about building modern web apps and learning new technologies.</p>
+      <p class="availability">💼 Available for <strong>Freelance & Internships</strong></p>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am currently pursuing a <strong>Bachelors in Mathematics and Computer Science</strong>. 
+        I enjoy solving complex problems with efficient algorithms, building web solutions, and exploring new programming technologies.
+      </p>
+    </section>
+
+
+        <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">C++</span>
+        <span class="skill">Python</span>
+        <span class="skill">React (Learning)</span>
+      </div>
+    </section>
+
+
     
+    <!-- Services -->
+    <section id="services" class="services">
+      <h2>Services I Offer</h2>
+      <p>I help individuals and businesses with modern C++ applications, websites, and custom software solutions.</p>
 
-    <!-- Sidebar / Aside Navigation -->
-    <aside id="sidebar">
-        <input type="checkbox" id="sidebarToggle" hidden>
-<label for="sidebarToggle" class="sidebar-toggle">☰</label>
-
-        <nav class="sidebar-nav">
-            <h1>Phumudzo.dev</h1>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </aside>
-
-    <!-- Main Content -->
-    <main>
-
-        <!-- Hero Section -->
-
-        <section class="hero">
-   <h2 class="typing-text">
-  <span id="typing"></span><span class="cursor">|</span>
-</h2>
-    <p>Hello! I'm Phumudzo, a Mathematics & Computer Science student passionate about building modern web apps and learning new technologies.</p>
-    <p class="availability">💼 Available for <strong>Freelance & Internships</strong></p>
-</section>
-        
-
-
-        <!-- About Me -->
-       <section id="about" class="about-section">
-  <div class="container">
-    <h2>About Me</h2>
-    <p>
-      I am currently pursuing a <strong>Bachelors in Mathematics and Computer Science</strong>. I enjoy solving complex problems with efficient algorithms, building web solutions, and exploring new programming technologies.
-    </p>
-  </div>
-</section>
-
-
-
-        <!-- Services Section with Form -->
-        <section id="services" class="services">
-            <h2>Services I Offer</h2>
-            <p>I help individuals and businesses with modern C++ applications, websites, and custom software solutions.</p>
-            
-            <div class="services-container">
-                <div class="service-card">
-                    <h3>C++ Development</h3>
-                    <p>Build desktop and console-based applications, simulations, and algorithms tailored to your needs.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Website Development</h3>
-                    <p>Design and develop responsive, modern websites with HTML, CSS, JavaScript, and frameworks like React.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Project Consultation</h3>
-                    <p>Offer guidance, planning, and strategy for your software projects to ensure success from start to finish.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Support & Maintenance</h3>
-                    <p>Provide ongoing support, updates, and troubleshooting for applications or websites I build.</p>
-                </div>
-            </div>
-
-            <!-- Hire Me Form -->
-            <div class="hire-me-form">
-                <h3>Request My Services</h3>
-                <form id="serviceRequestForm" action="mailto:phumumatshaya@gmail.com" method="POST" enctype="text/plain">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <input type="text" name="service" placeholder="Service Required (e.g., C++ Project)" required>
-                    <textarea name="details" placeholder="Project Details / Message" rows="5" required></textarea>
-                    <button type="submit" class="btn">Send Request</button>
-                </form>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-         
-        <section id="projects">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-container">
-        
-
-            <!-- Project 1: Public Transport Queue System -->
-            <div class="project-card">
-                <h3>Public Transport Queue System (C++)</h3>
-                <p>A console-based system managing passenger queues, priority handling, and reporting.</p>
-            
-            
-                <!-- View Details -->
-                <a href="project-queue.html" target="_blank" class="btn">View Details</a>
-
-                <!-- Output Preview -->
-                <button class="btn view-output" data-output="output1">View Output</button>
-                <div class="output-preview">
-                    <button class="output-toggle">▶ View Output Preview</button>
-                    <pre class="output-content">
-PUBLIC TRANSPORT QUEUE SYSTEM
------------------------------
-Time: 0 | Arrivals: S0(3) L0(5)
-Taxi S: Boarding S0(3)
-Taxi L: Boarding L0(5)
-
-Time: 1 | Arrivals: C1(4)
-Taxi C: Boarding C1(4)
-
-Time: 5 | Taxi S FULL — Departing
-Time: 6 | Taxi L FULL — Departing
-Time: 7 | Taxi C FULL — Departing
-                </pre>
-            </div>
+      <div class="services-container">
+        <div class="service-card">
+          <h3>C++ Development</h3>
+          <p>Desktop, console-based applications, simulations, and algorithms.</p>
         </div>
 
-        <!-- Project 2: Smart City Route Management System -->
+        <div class="service-card">
+          <h3>Website Development</h3>
+          <p>Responsive modern websites using HTML, CSS, JavaScript, and React.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Project Consultation</h3>
+          <p>Planning, architecture, and strategy for software projects.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Support & Maintenance</h3>
+          <p>Ongoing support, updates, and troubleshooting.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="projects-container">
+
         <div class="project-card">
-            <h3>Smart City Route Management System (C++)</h3>
-            <p>Finds shortest paths, manages city routes, and simulates smart routing decisions.</p>
-            
-            <!-- View Details -->
-            <a href="project-smartcity.html" target="_blank" class="btn">View Details</a>
+          <h3>Public Transport Queue System (C++)</h3>
+          <p>Console-based system managing passenger queues.</p>
+          <a href="project-queue.html" target="_blank" class="btn">View Details</a>
 
-            <!-- Output Preview -->
-            <button class="btn view-output" data-output="output2">View Output</button>
-            <div class="output-preview">
-                <button class="output-toggle">▶ View Output Preview</button>
-                <pre class="output-content">
-SMART CITY ROUTE MANAGEMENT SYSTEM
-----------------------------------
-Initializing sample city network...
-Route added: Downtown - Airport
-Route added: Downtown - University
-Route added: University - Harbor
-Route added: Harbor - Stadium
-
-Dijkstra Shortest Path Example:
-Downtown → University → Stadium
-Distance: 20.5 km
-Time: 40 minutes
-Cost: $21.00
-                </pre>
-            </div>
+          <div class="output-preview">
+            <button class="output-toggle">▶ View Output Preview</button>
+            <pre class="output-content">PUBLIC TRANSPORT QUEUE SYSTEM...</pre>
+          </div>
         </div>
 
-        <!-- Project 3: Transport Connectivity in Southern Africa -->
         <div class="project-card">
-            <h3>Transport Connectivity in Southern Africa (C++)</h3>
-            <p>Analyzes regional transport networks using graph algorithms & connectivity metrics.</p>
-            
-            <!-- View Details -->
-            <a href="project-connectivity.html" target="_blank" class="btn">View Details</a>
+          <h3>Smart City Route Management (C++)</h3>
+          <p>Shortest paths and smart routing using graphs.</p>
+          <a href="project-smartcity.html" target="_blank" class="btn">View Details</a>
 
-            <!-- Output Preview -->
-            <button class="btn view-output" data-output="output3">View Output</button>
-            <div class="output-preview">
-                <button class="output-toggle">▶ View Output Preview</button>
-                <pre class="output-content">
-TRANSPORT CONNECTIVITY IN SOUTHERN AFRICA
------------------------------------------
-Adjacency Matrix Loaded:
-Johannesburg → Windhoek: 1400 km
-Gaborone → Johannesburg: 350 km
-Harare → Gaborone: 950 km
-
-BFS Traversal:
-Johannesburg → Windhoek → Gaborone → Harare → Maputo
-
-Dijkstra Shortest Path (Johannesburg to Harare):
-Johannesburg → Gaborone → Harare
-Total Distance: 1300 km
-                </pre>
-            </div>
+          <div class="output-preview">
+            <button class="output-toggle">▶ View Output Preview</button>
+            <pre class="output-content">SMART CITY ROUTE MANAGEMENT...</pre>
+          </div>
         </div>
 
-        <!-- Project 4: Qt-Based Library Management System -->
         <div class="project-card">
-            <h3>Qt-Based Library Management System (C++)</h3>
-            <p>A full desktop GUI system for managing books, users, and loans.</p>
-            
-            <!-- View Details -->
-            <a href="project-library.html" target="_blank" class="btn">View Details</a>
-
-            <!-- Output Preview -->
-            <button class="btn view-output" data-output="output4">View Output</button>
-            <div class="output-preview">
-                <button class="output-toggle">▶ View Output Preview</button>
-                <pre class="output-content">
-QT-BASED LIBRARY MANAGEMENT SYSTEM
-----------------------------------
-[Main Menu]
-1. Add Book
-2. Borrow Book
-3. Return Book
-4. Search Book
-5. View All Books
-
-> Adding Book: "Introduction to Algorithms"
-> Book added successfully.
-
-> Searching: "Algorithms"
-Found:
- - Introduction to Algorithms | Status: Available
-
-> Borrowing book...
-Borrow Successful: Book is now marked as "Borrowed"
-
-GUI Status Updates:
-✔ Book Table Updated
-✔ Borrow/Return Buttons Enabled
-✔ Search Results Displayed
-
-Application Ready.
-                </pre>
-            </div>
+          <h3>Transport Connectivity (C++)</h3>
+          <p>Regional transport analysis using graph algorithms.</p>
+          <a href="project-connectivity.html" target="_blank" class="btn">View Details</a>
         </div>
 
-        <!-- Project 5: Phumudzo Tech Shop -->
-<div class="project-card">
-    <h3>Phumudzo Tech Shop</h3>
-    <p>A responsive tech e-commerce website showcasing products, built with HTML, CSS, and JavaScript.</p>
-
-    <!-- View Details -->
-    <a href="project-techshop.html" target="_blank" class="btn">View Details</a>
-
-    <!-- Output Preview -->
-    <button class="btn view-output" data-output="output5">View Preview</button>
-    <div class="output-preview">
-        <button class="output-toggle">▶ View Preview</button>
-        <pre class="output-content">
-Visit the live website here:
-https://phumudzo2006.github.io/Phumustechshop/
-        </pre>
-    </div>
-</div>
-
-
-    </div>
-</section>
-
-
-
-
-<!-- run code -->
-        <section id="run-code">
-  <h2>Run My Codes here: </h2>
-  <p>Try out my C++ examples live:</p>
-
-  <textarea id="codeInput" rows="12">// Write or paste C++ code here
-#include <iostream>
-using namespace std;
-
-int main() 
-{
-    cout << "Hello from Phumudzo.dev!" << endl;
-    return 0;
-}
-</textarea>
-
-  <button class="btn" id="runBtn">▶ Run Code</button>
-
-  <pre id="outputBox">Output will appear here...</pre>
-</section>
-
-        
-
-        <!-- Modal Popup for Project Outputs -->
-        <div id="output-modal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <pre id="outputText"></pre>
-            </div>
+        <div class="project-card">
+          <h3>Qt Library Management System</h3>
+          <p>Desktop GUI system for managing books and loans.</p>
+          <a href="project-library.html" target="_blank" class="btn">View Details</a>
         </div>
 
-        <!-- Skills Section -->
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skills">
-                <span class="skill">HTML</span>
-                <span class="skill">CSS</span>
-                <span class="skill">JavaScript</span>
-                <span class="skill">C++</span>
-                <span class="skill">Python</span>
-                <span class="skill">React (learning)</span>
-            </div>
-        </section>
-
-        <!-- Resume -->
-        <section id="resume" class="resume">
-            <h2>Resume / CV</h2>
-            <p>Download my resume to learn more about my education, experience, and skills.</p>
-            
-            <div class="resume-buttons">
-                <a href="resume.pdf" target="_blank" class="btn">Download Resume</a>
-                <a href="resume.pdf#toolbar=0" target="_blank" class="btn">View Online</a>
-            </div>
-
-            <div class="resume-preview">
-                <iframe src="resume.pdf#toolbar=0" width="100%" height="600px"></iframe>
-            </div>
-        </section>
-
-        <!-- Floating CTA -->
-        <div id="floating-cta" class="floating-cta">
-            <p>🚀 Want a C++ project or a website? Let's build it together!</p>
-            <div class="floating-cta-buttons">
-                <a href="#hireMe" class="btn btn-primary">Hire Me</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
-            </div>
-            <span id="close-cta">&times;</span>
+        <div class="project-card">
+          <h3>Phumudzo Tech Shop</h3>
+          <p>Responsive tech e-commerce website.</p>
+          <a href="project-techshop.html" target="_blank" class="btn">View Details</a>
         </div>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <h2>Contact</h2>
-            <p>Reach out to me for projects and collaborations</p>
+      </div>
+    </section>
 
-            <div class="contact-buttons">
-                <a href="mailto:phumumatshaya@gmail.com" class="btn">Email Me</a>
-                <a href="tel:+27796315320" class="btn">Call Me</a>
-                <a class="btn" href="https://wa.me/27796315320" target="_blank">💬 Chat on WhatsApp</a>
-                <a href="https://instagram.com/phumudzo.dev" target="_blank" class="btn">Follow Me on Instagram</a>
-            </div>
-        </section>
 
-        <!-- Footer -->
-        <footer>
-            &copy; 2026 Phumudzo.dev | Built with by Phumudzo
-        </footer>
 
-    </main>
+    <!-- Resume -->
+    <section id="resume">
+      <h2>Resume</h2>
+      <p>Download or view my resume.</p>
+      <a href="resume.pdf" target="_blank" class="btn">Download Resume</a>
+    </section>
 
-    <!-- JS -->
+    <!-- Hire Me -->
+    <section id="hireMe" class="hire-me-form">
+      <h3>Request My Services</h3>
+      <form action="mailto:phumumatshaya@gmail.com" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="service" placeholder="Service Required" required>
+        <textarea name="details" rows="5" placeholder="Project Details" required></textarea>
+        <button type="submit" class="btn">Send Request</button>
+      </form>
+    </section>
 
-<script src="script.js"></script>
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Let’s Connect</h2>
+
+      <div class="contact-actions">
+        <a href="https://wa.me/27796315320" target="_blank" class="contact-btn whatsapp">
+          <span class="icon">💬</span>
+          <div><strong>WhatsApp</strong><small>Chat with me</small></div>
+        </a>
+
+        <a href="mailto:phumumatshaya@gmail.com" class="contact-btn email">
+          <span class="icon">✉️</span>
+          <div><strong>Email</strong><small>Send a message</small></div>
+        </a>
+
+        <a href="tel:+27796315320" class="contact-btn phone">
+          <span class="icon">📞</span>
+          <div><strong>Phone</strong><small>Call directly</small></div>
+        </a>
+
+        <a href="https://instagram.com/phumudzo.dev" target="_blank" class="contact-btn instagram">
+          <span class="icon">📷</span>
+          <div><strong>Instagram</strong><small>DM me</small></div>
+        </a>
+
+        <a href="https://github.com/phumudzo2006" target="_blank" class="contact-btn github">
+          <span class="icon">💻</span>
+          <div><strong>GitHub</strong><small>View my work</small></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+&copy; 2026 Phumudzo.dev | Built with by Phumudzo
+
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
