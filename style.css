@@ -135,6 +135,14 @@ body {
   }
 }
 
+.menu-btn.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* =====================
    MAIN CONTENT
 ===================== */
