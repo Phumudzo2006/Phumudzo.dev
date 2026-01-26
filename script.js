@@ -1,29 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* =====================
-     SIDEBAR TOGGLE (JS ONLY)
-  ===================== */
-  const sidebar = document.getElementById("sidebar");
-  const menuBtn = document.getElementById("menuBtn");
+/* =====================
+   SIDEBAR TOGGLE (HEADER BUTTON)
+===================== */
+const sidebar = document.getElementById("sidebar");
+const menuToggle = document.getElementById("menuToggle");
 
-  if (menuBtn && sidebar) {
-    menuBtn.addEventListener("click", () => {
+if (menuToggle && sidebar) {
+  menuToggle.addEventListener("click", () => {
+    if (window.innerWidth < 1024) {
+      sidebar.classList.toggle("open");      // Mobile slide
+    } else {
+      sidebar.classList.toggle("collapsed"); // Desktop shrink
+    }
+  });
+
+  // Close sidebar when link clicked (mobile)
+  document.querySelectorAll(".sidebar-nav a").forEach(link => {
+    link.addEventListener("click", () => {
       if (window.innerWidth < 1024) {
-        sidebar.classList.toggle("open");      // Mobile
-      } else {
-        sidebar.classList.toggle("collapsed"); // Desktop
+        sidebar.classList.remove("open");
       }
     });
+  });
+}
 
-    // Close sidebar when clicking a link on mobile
-    document.querySelectorAll(".sidebar-nav a").forEach(link => {
-      link.addEventListener("click", () => {
-        if (window.innerWidth < 1024) {
-          sidebar.classList.remove("open");
-        }
-      });
-    });
-  }
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("active");
+});
 
   /* =====================
      OUTPUT PREVIEW TOGGLE
