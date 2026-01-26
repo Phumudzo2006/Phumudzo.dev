@@ -247,6 +247,7 @@ p {
   border: 1px solid #1e293b;
 }
 
+
 /* =====================
    OUTPUT PREVIEW
 ===================== */
@@ -411,4 +412,110 @@ footer {
   color: #64748b;
   border-top: 1px solid #1e293b;
   font-size: 0.85rem;
+}
+
+
+.project-link {
+  display: inline-block;
+  margin-top: 0.6rem;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.project-link:hover {
+  background: #38bdf8;
+  color: #0b0f14;
+  transform: translateY(-2px);
+}
+
+
+.project-link::after {
+  content: " →";
+  transition: transform 0.2s ease;
+}
+
+.project-link:hover::after {
+  transform: translateX(4px);
+}
+
+/* Resume button special effect */
+.resume-btn {
+  position: relative;
+  overflow: hidden;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+/* Icon animation */
+.resume-btn .icon {
+  display: inline-block;
+  margin-right: 6px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effects */
+.resume-btn:hover {
+  background: #38bdf8;
+  color: #0b0f14;
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.45);
+}
+
+/* Arrow slides down */
+.resume-btn:hover .icon {
+  transform: translateY(5px);
+}
+
+/* Shine sweep effect */
+.resume-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+.resume-btn:hover::before {
+  left: 120%;
+}
+
+
+.contact-btn .icon i {
+  transition: transform 0.2s ease;
+}
+
+.contact-btn:hover .icon i {
+  transform: scale(1.2);
+}
+
+
+.project-links {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+
+.project-link:first-child {
+  background: #38bdf8;
+  color: #0b0f14;
+}
+
+.project-link:first-child:hover {
+  box-shadow: 0 0 16px rgba(56,189,248,0.5);
 }
