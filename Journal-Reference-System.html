@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Qt-based Library Management System built in C++ using Qt Widgets, signals & slots. Demonstrates CRUD operations, GUI design, and event-driven programming.">
+    <title>Journal Reference System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(180deg, #0b0f14, #0f172a);
+        color: #e5e7eb;
+        line-height: 1.7;
+    }
+
+    header {
+        padding: 4rem 2rem;
+        text-align: center;
+        background: radial-gradient(circle at top, #1e293b, #0b0f14);
+        border-bottom: 1px solid #1f2937;
+    }
+
+    header h1 {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+        max-width: 700px;
+        margin: auto;
+        color: #94a3b8;
+        font-size: 1.1rem;
+    }
+
+    main {
+        max-width: 1000px;
+        margin: auto;
+        padding: 3rem 1.5rem;
+    }
+
+    section {
+        margin-bottom: 2.5rem;
+        padding: 2rem;
+        background: #111827;
+        border: 1px solid #1f2937;
+        border-radius: 16px;
+        transition: 0.3s ease;
+    }
+
+    section:hover {
+        transform: translateY(-4px);
+        border-color: #38bdf8;
+    }
+
+    h2 {
+        margin-top: 0;
+        color: #38bdf8;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    ul { padding-left: 1.2rem; }
+    ul li { margin-bottom: 0.5rem; color: #cbd5e1; }
+    p { color: #cbd5e1; }
+
+    .project-tech { text-align: center; margin-bottom: 2rem; }
+
+    .badge {
+        display: inline-block;
+        padding: 0.4rem 0.9rem;
+        margin: 0.3rem;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        background: #1e293b;
+        border: 1px solid #334155;
+        color: #38bdf8;
+    }
+
+    pre {
+        background: #0f172a;
+        padding: 1.5rem;
+        border-radius: 12px;
+        overflow-x: auto;
+        border: 1px solid #1f2937;
+        color: #e2e8f0;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 0.9rem 1.8rem;
+        background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+        color: #0b0f14;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s ease;
+    }
+
+    .btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px #38bdf8aa;
+    }
+
+    @media (max-width: 768px) {
+        header h1 { font-size: 2rem; }
+        section { padding: 1.5rem; }
+    }
+</style>
+
+</head>
+<body class="project"></body>
+    <header>
+        <h1>Journal Reference System </h1>
+        <p>A desktop application for managing academic journal references and citation.</p>
+        <p><strong>Built to strengthen my software development, data management and object-oriented programming skills.</strong></p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Project Overview</h2>
+            <p>
+                The Journal Reference system is a C++ destop application developed using QT Creator.
+                It allow users to store, organize, search and manage academic journal references efficiently through a user friendly interface
+            </p>
+            <div class="project-tech">
+    <span class="badge">C++</span>
+    <span class="badge">Qt Creater</span>
+    <span class="badge">Desktop Application</span>
+    <span class="badge">OOP</span>
+    <span class="badge">Reference management</span>
+</div>
+</section>
+
+        <section>
+  <h2>Problem & Motivation</h2>
+  <p>
+    Managing academic references manually can be time-consuming and error-prone. 
+    this project that simplifies the process of storing, organizing, and retrieving journal references for research purposes.
+  </p>
+</section>
+
+      <section>
+  <h2>Why I Built This Project</h2>
+  <p>
+    built this project to improve my understanding of desktop application development,oop and data management using C++ and QT Creator, also for school perposes.
+    
+  </p>
+  
+</section>
+
+ <section>
+            <h2>Key Features</h2>
+            <ul>
+                <li>Add new Journal references</li>
+                <li>Edit existing references information</li>
+                <li>Delete reference</li>
+                <li>Search references by title, author or publication year</li>
+                <li>store journal details including author, title, volume, and DOI</li>
+                <li>User Friendly Qt-Based interface</li>
+            </ul>
+        </section>
+
+
+        <section>
+  <h2>Technologies Used</h2>
+  <ul>
+    <li>C++</li>
+    <li>Qt Creator</li>
+    <li>Qt Widgets</li>
+    <li>signals & slots</li>
+    <li>Object-Oriented Programming</li>
+  </ul>
+</section>
+
+     <section>
+  <h2>Challenges Faced</h2>
+  <ul>
+    <li>Designin an efficient data structure for Journal references</li>
+    <li>Keeping the user interface synchronized with stored data</li>
+    <li>Implementing search functionality across multiple fields</li>
+    <li>separating application logic from user interface components</li>
+  </ul>
+</section>
+
+
+<section>
+    <h2>What I Learned</h2>
+    <ul>
+        <li>Desktop applications development using Qt</li>
+        <li>Event-driven programming</li>
+        <li>object-oriented softwere designing</li>
+        <li>CRUD operations and data manegement</li>
+        <li>Building maintainable C++ application</li>
+    </ul>
+</section>
+
+<section>
+  <h2>Project Access</h2>
+  <p>
+    The complete source code for this project is hosted on GitHub:
+  </p>
+  <ul>
+    <li>
+      <strong>GitHub Repository:</strong>
+     <a href="https://github.com/Phumudzo2006/Journal-Reference-System"
+   target="_blank" rel="noopener noreferrer"
+   style="color:#38bdf8;">
+  View Source Code
+</a>
+
+    </li>
+  </ul>
+</section>
+
+<section>
+    <h2>Project Access</h2>
+    <p>
+        The complete source code for this project is hosted on GitHub:
+    </p>
+
+    <ul>
+        <li>
+            <strong>GitHub Repository:</strong>
+            <a href="https://github.com/Phumudzo2006/Journal-Reference-System"
+               target="_blank"
+               rel="noopener noreferrer"
+               style="color:#38bdf8;">
+                View Source Code
+            </a>
+        </li>
+    </ul>
+</section>
+
+<section>
+  <h2>How to Run</h2>
+  <pre>
+#Clone Repository
+git clone https://github.com/Phumudzo2006/Journal-Reference-System.git
+
+#open in Qt Creator
+1) Open Qt Creator
+2) Open the Project file
+3) Build the project
+4) Run the application
+  </pre>
+</section>
+
+
+   <section>
+    <h2>Demo Walkthrough</h2>
+    <ul>
+        <li>Add a new journal reference</li>
+        <li>Edit author, title, and publication details</li>
+        <li>Search references using keywords</li>
+        <li>View stored references in the system</li>
+        <li>Delete outdated references</li>
+    </ul>
+</section>
+
+
+<section>
+    <h2>Future Improvements</h2>
+    <ul>
+        <li>Add SQLite database integration</li>
+        <li>Support APA, Harvard, and IEEE citation formats</li>
+        <li>Export references to PDF and CSV</li>
+        <li>Add user authentication</li>
+        <li>Cloud synchronization for reference libraries</li>
+    </ul>
+</section>
+
+
+        <section>
+            <a href="index.html" class="btn">← Back to Portfolio</a>
+        </section>
+    </main>
+</body>
+</html>
