@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phumudzo Tech Shop</title>
+
+  <meta name="description" content="Phumudzo Tech Shop — a responsive front-end e-commerce style website built with HTML, CSS, and JavaScript. Demonstrates UI layout, responsive design, and interactive components for internship-ready web development." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+  <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background: linear-gradient(180deg, #0b0f14, #0f172a);
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: radial-gradient(circle at top, #1e293b, #0b0f14);
+      border-bottom: 1px solid #1f2937;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      max-width: 850px;
+      margin: 0.6rem auto 0;
+      color: #94a3b8;
+      font-size: 1.1rem;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 3rem 1.5rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+      padding: 2rem;
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      transition: 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+      border-color: #38bdf8;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #38bdf8;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    ul { padding-left: 1.2rem; }
+    ul li { margin-bottom: 0.5rem; color: #cbd5e1; }
+    p { color: #cbd5e1; }
+
+    .project-tech {
+      text-align: center;
+      margin-top: 1.2rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.4rem 0.9rem;
+      margin: 0.3rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #38bdf8;
+    }
+
+    a { text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 1.8rem;
+      background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+      color: #0b0f14;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #38bdf8aa;
+      text-decoration: none;
+    }
+
+    .link {
+      color: #38bdf8;
+      font-weight: 600;
+    }
+
+    .preview-card {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .preview-card img {
+      border-radius: 12px;
+      width: 100%;
+      max-width: 780px;
+      transition: transform 0.3s;
+      cursor: pointer;
+      border: 2px solid #38bdf8;
+    }
+
+    .preview-card img:hover {
+      transform: scale(1.03);
+    }
+
+    .two-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      section { padding: 1.5rem; }
+    }
+  </style>
+</head>
+
+<body class="project"></body>
+  <header>
+    <h1>Phumudzo Tech Shop</h1>
+    <p>
+      A responsive e-commerce-style front-end website that showcases tech products with a clean UI,
+      interactive navigation, and mobile-friendly layout using HTML, CSS, and JavaScript.
+    </p>
+    <p><strong>Built to strengthen my front-end development skills for internship opportunities.</strong></p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Project Overview</h2>
+      <p>
+        Phumudzo Tech Shop is a front-end web project that simulates a modern tech store experience.
+        It focuses on product presentation, responsive layout, and a smooth user experience across devices.
+        The site demonstrates how a small business or portfolio store page can be structured and styled professionally.
+      </p>
+
+      <div class="project-tech">
+        <span class="badge">HTML</span>
+        <span class="badge">CSS</span>
+        <span class="badge">JavaScript</span>
+        <span class="badge">Responsive UI</span>
+        <span class="badge">Front-End</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Why I Built This Project</h2>
+      <p>
+        I built this project to practice creating a real-looking e-commerce website layout from scratch and improve my
+        skills in responsive design, page structure, and interactive front-end behavior.
+      </p>
+      <p>
+        It also helped me learn how to present a product-focused interface clearly—similar to what users expect on modern
+        shopping or catalogue websites.
+      </p>
+    </section>
+
+    <section>
+      <h2>Problem Statement</h2>
+      <p>
+        Many small businesses and personal portfolios need a clean platform to showcase products or services without using heavy frameworks.
+        The challenge is building a site that remains fast, responsive, and visually consistent on mobile and desktop.
+      </p>
+      <p>
+        This project addresses that by implementing a lightweight front-end solution that emphasizes usability, layout consistency,
+        and clean presentation of content.
+      </p>
+    </section>
+
+    <section>
+      <h2>Technologies Used</h2>
+      <ul>
+        <li><strong>HTML</strong> for semantic layout and page structure</li>
+        <li><strong>CSS</strong> for styling, responsiveness, and UI consistency</li>
+        <li><strong>JavaScript</strong> for interactivity (navigation behavior, UI actions)</li>
+        <li><strong>GitHub Pages</strong> for deployment</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Key Features</h2>
+      <ul>
+        <li>Responsive design for mobile, tablet, and desktop</li>
+        <li>Clean product-style layout and modern UI styling</li>
+        <li>Smooth scrolling navigation for easy browsing</li>
+        <li>Reusable components/sections (easy to expand with more products)</li>
+        <li>Deployment-ready structure (works well on GitHub Pages)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>My Role in the Project</h2>
+      <ul>
+        <li>Designed and implemented the full layout using semantic HTML</li>
+        <li>Built responsive styling using CSS (mobile-first adjustments)</li>
+        <li>Implemented interactive elements using JavaScript</li>
+        <li>Optimized UI components and page structure for clarity and readability</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Challenges Faced</h2>
+      <ul>
+        <li>Keeping spacing and typography consistent across screen sizes</li>
+        <li>Making navigation smooth while maintaining accessibility</li>
+        <li>Balancing visuals (images/cards) with performance and load speed</li>
+        <li>Organizing the project structure to stay clean and easy to maintain</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What I Learned</h2>
+      <ul>
+        <li>How to build a responsive UI without frameworks</li>
+        <li>How to design reusable page sections for scalability</li>
+        <li>How small UI choices (spacing, hierarchy, contrast) affect usability</li>
+        <li>How to deploy and maintain a front-end project using GitHub Pages</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Project Access</h2>
+      <p>
+        The project source code and live preview are available below:
+      </p>
+
+      <div class="two-links">
+        <a class="btn"
+           href="https://phumudzo2006.github.io/Phumustechshop/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Live Website
+        </a>
+
+        <a class="btn"
+           href="https://github.com/Phumudzo2006/phumus-tech-shop"
+           target="_blank"
+           rel="noopener noreferrer">
+          GitHub Repository
+        </a>
+      </div>
+    </section>
+
+
+
+    <section>
+      <h2>Future Improvements</h2>
+      <ul>
+        <li>Add a shopping cart and checkout flow (localStorage for cart persistence)</li>
+        <li>Load products dynamically from JSON (or an API) instead of hardcoding</li>
+        <li>Add filtering/sorting (price, category, rating)</li>
+        <li>Improve accessibility (keyboard navigation, ARIA labels)</li>
+        <li>Add subtle animations and micro-interactions for modern UX</li>
+      </ul>
+    </section>
+
+    <section>
+      <a href="index.html" class="btn">← Back to Portfolio</a>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart City Route Management System</title>
+
+  <meta name="description" content="C++ smart city route management simulator using graph theory and Dijkstra’s algorithm with AI-inspired congestion prediction and explainable decision steps (XAI). Built to demonstrate algorithms, data structures, and internship-ready engineering." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+  <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background: linear-gradient(180deg, #0b0f14, #0f172a);
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: radial-gradient(circle at top, #1e293b, #0b0f14);
+      border-bottom: 1px solid #1f2937;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      max-width: 850px;
+      margin: 0.6rem auto 0;
+      color: #94a3b8;
+      font-size: 1.1rem;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 3rem 1.5rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+      padding: 2rem;
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      transition: 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+      border-color: #38bdf8;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #38bdf8;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    ul { padding-left: 1.2rem; }
+    ul li { margin-bottom: 0.5rem; color: #cbd5e1; }
+    p { color: #cbd5e1; }
+
+    .project-tech {
+      text-align: center;
+      margin-top: 1.2rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.4rem 0.9rem;
+      margin: 0.3rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #38bdf8;
+    }
+
+    pre {
+      background: #0f172a;
+      padding: 1.5rem;
+      border-radius: 12px;
+      overflow-x: auto;
+      border: 1px solid #1f2937;
+      color: #e2e8f0;
+      white-space: pre;
+    }
+
+    a { text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 1.8rem;
+      background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+      color: #0b0f14;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #38bdf8aa;
+      text-decoration: none;
+    }
+
+    .link {
+      color: #38bdf8;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      section { padding: 1.5rem; }
+    }
+  </style>
+</head>
+
+<body class="project"></body>
+  <header>
+    <h1>Smart City Route Management System (C++)</h1>
+    <p>
+      A smart city road-network simulator that models intersections as nodes and roads as weighted edges,
+      computes optimal routes with Dijkstra’s algorithm, and adds AI-inspired congestion prediction + explainable decision steps (XAI).
+    </p>
+    <p><strong>Built to strengthen my algorithms, data structures, and system modeling skills for software engineering internship roles.</strong></p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Project Overview</h2>
+      <p>
+        This C++ console application simulates a city’s transportation network and finds optimal routes based on
+        <strong>distance</strong>, <strong>travel time</strong>, and <strong>cost</strong>. It also introduces an AI-inspired congestion model
+        that adjusts travel time during peak hours, and provides a step-by-step explanation of how the route was chosen (XAI).
+      </p>
+      <div class="project-tech">
+        <span class="badge">C++</span>
+        <span class="badge">Graphs</span>
+        <span class="badge">Dijkstra</span>
+        <span class="badge">Adjacency List</span>
+        <span class="badge">Priority Queue</span>
+        <span class="badge">XAI</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Why I Built This Project</h2>
+      <p>
+        I built this project to practice designing a realistic routing system like the ones used in navigation and smart-city planning.
+        I wanted to go beyond “shortest distance” and include real constraints (time, cost, congestion), while also improving how systems explain decisions.
+      </p>
+      <p>
+        This helped me strengthen both algorithmic thinking and software structure—especially modeling networks, managing weights, and reconstructing paths cleanly.
+      </p>
+    </section>
+
+    <section>
+      <h2>Problem Statement</h2>
+      <p>
+        Cities face congestion and route inefficiencies that increase travel time and cost. Navigation systems also often behave like “black boxes,”
+        giving routes without showing why they’re optimal.
+      </p>
+      <p>
+        This project addresses these problems by simulating smart route selection using graph algorithms and providing
+        <strong>transparent step-by-step reasoning</strong> for the final path (Explainable AI).
+      </p>
+    </section>
+
+    <section>
+      <h2>Technologies Used</h2>
+      <ul>
+        <li><strong>C++</strong> for core system implementation</li>
+        <li><strong>Adjacency List</strong> using <code>map&lt;int, vector&lt;Edge&gt;&gt;</code> for the road network</li>
+        <li><strong>Dijkstra’s Algorithm</strong> for shortest-path computation with non-negative weights</li>
+        <li><strong>STL Data Structures</strong>: <code>map</code>, <code>vector</code>, <code>priority_queue</code>, <code>set</code></li>
+        <li><strong>AI-inspired congestion prediction</strong> (peak-hour travel-time adjustment)</li>
+        <li><strong>XAI logging</strong> to explain each decision step</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Key Features</h2>
+      <ul>
+        <li>City network modeling: intersections as nodes, roads as weighted edges</li>
+        <li>Shortest-path routing using Dijkstra (supports distance, time, cost metrics)</li>
+        <li>AI-inspired congestion prediction (e.g., peak-hour travel time increases)</li>
+        <li>Explainable routing (XAI): step-by-step reasoning for why nodes/paths were chosen</li>
+        <li>Route management actions (add/update/remove routes) and network viewing</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>My Role in the Project</h2>
+      <ul>
+        <li>Designed the network model and <code>Edge</code> structure for route data</li>
+        <li>Implemented Dijkstra using a min-heap (<code>priority_queue</code>) for efficient node selection</li>
+        <li>Added congestion logic to adjust travel-time weights based on time windows</li>
+        <li>Implemented path reconstruction and readable console explanations (XAI)</li>
+        <li>Built modular functions for route management and reporting</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Challenges Faced</h2>
+      <ul>
+        <li>Designing weight calculations across multiple metrics (distance, time, cost) without breaking correctness</li>
+        <li>Implementing Dijkstra cleanly with maps/priority queues and avoiding stale heap entries</li>
+        <li>Reconstructing paths reliably (parent tracking) after the shortest distances are computed</li>
+        <li>Making explanations readable and useful (XAI) instead of overwhelming logs</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What I Learned</h2>
+      <ul>
+        <li>How to model real transport networks using graphs and adjacency lists</li>
+        <li>How Dijkstra behaves step-by-step, and how data structures impact performance</li>
+        <li>How to extend a classic algorithm with realistic constraints (like congestion)</li>
+        <li>How to produce transparent, explainable outputs for algorithmic decisions (XAI)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Project Access</h2>
+      <p>The complete source code is hosted on GitHub:</p>
+      <ul>
+        <li>
+          <strong>GitHub Repository:</strong>
+          <a class="link"
+             href="https://github.com/Phumudzo2006/Smart-City-Route-Management-System"
+             target="_blank"
+             rel="noopener noreferrer">
+            View Source Code
+          </a>
+        </li>
+      </ul>
+      <p>This is a C++ console application and can be compiled locally using a standard C++ compiler.</p>
+    </section>
+
+    <section>
+      <h2>How to Run the Project</h2>
+      <pre>
+git clone https://github.com/Phumudzo2006/Smart-City-Route-Management-System.git
+cd Smart-City-Route-Management-System
+
+g++ main.cpp -o smart_city
+./smart_city
+      </pre>
+      <p>If your compiler requires it, add <code>-std=c++17</code>:
+        <code>g++ -std=c++17 main.cpp -o smart_city</code>
+      </p>
+    </section>
+
+    <section>
+      <h2>Sample Output</h2>
+      <pre>
+SMART CITY ROUTE MANAGEMENT SYSTEM
+----------------------------------
+Step 1: Exploring node Downtown
+  --> Found path to University via Main_Street
+
+Step 2: Exploring node University
+  --> Better path to Harbor via Coastal_Drive
+
+Optimal Path:
+Downtown → University → Harbor → Stadium
+
+Total Distance: 27.5 km
+Total Time: 42 minutes
+Total Cost: $20.50
+      </pre>
+    </section>
+
+    <section>
+      <h2>Future Improvements</h2>
+      <ul>
+        <li>Add a GUI (Qt) to visualize the network and chosen routes</li>
+        <li>Use real-time traffic simulation (dynamic edge weights) instead of fixed time windows</li>
+        <li>Store routes in a database (SQLite) and load networks from files</li>
+        <li>Generate analytics reports (average congestion impact, route comparisons, heatmaps)</li>
+      </ul>
+    </section>
+
+    <section>
+      <a href="index.html" class="btn">← Back to Portfolio</a>
+    </section>
+  </main>
+</body>
+</html>

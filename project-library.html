@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Qt-based Library Management System built in C++ using Qt Widgets, signals & slots. Demonstrates CRUD operations, GUI design, and event-driven programming.">
+    <title>Qt-Based Library Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(180deg, #0b0f14, #0f172a);
+        color: #e5e7eb;
+        line-height: 1.7;
+    }
+
+    header {
+        padding: 4rem 2rem;
+        text-align: center;
+        background: radial-gradient(circle at top, #1e293b, #0b0f14);
+        border-bottom: 1px solid #1f2937;
+    }
+
+    header h1 {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+        max-width: 700px;
+        margin: auto;
+        color: #94a3b8;
+        font-size: 1.1rem;
+    }
+
+    main {
+        max-width: 1000px;
+        margin: auto;
+        padding: 3rem 1.5rem;
+    }
+
+    section {
+        margin-bottom: 2.5rem;
+        padding: 2rem;
+        background: #111827;
+        border: 1px solid #1f2937;
+        border-radius: 16px;
+        transition: 0.3s ease;
+    }
+
+    section:hover {
+        transform: translateY(-4px);
+        border-color: #38bdf8;
+    }
+
+    h2 {
+        margin-top: 0;
+        color: #38bdf8;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    ul { padding-left: 1.2rem; }
+    ul li { margin-bottom: 0.5rem; color: #cbd5e1; }
+    p { color: #cbd5e1; }
+
+    .project-tech { text-align: center; margin-bottom: 2rem; }
+
+    .badge {
+        display: inline-block;
+        padding: 0.4rem 0.9rem;
+        margin: 0.3rem;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        background: #1e293b;
+        border: 1px solid #334155;
+        color: #38bdf8;
+    }
+
+    pre {
+        background: #0f172a;
+        padding: 1.5rem;
+        border-radius: 12px;
+        overflow-x: auto;
+        border: 1px solid #1f2937;
+        color: #e2e8f0;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 0.9rem 1.8rem;
+        background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+        color: #0b0f14;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s ease;
+    }
+
+    .btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px #38bdf8aa;
+    }
+
+    @media (max-width: 768px) {
+        header h1 { font-size: 2rem; }
+        section { padding: 1.5rem; }
+    }
+</style>
+
+</head>
+<body class="project"></body>
+    <header>
+        <h1>Qt-Based Library Management System (C++)</h1>
+        <p>A full desktop GUI system for managing books, users, and loans using Qt framework.</p>
+        <p><strong>Built to strengthen my desktop GUI development skills for software engineering internship roles.</strong></p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Project Overview</h2>
+            <p>
+                This project is a desktop application built with C++ and Qt.
+                Users can add, borrow, return, and search books.
+                The system updates dynamically with a clean GUI.
+            </p>
+            <div class="project-tech">
+    <span class="badge">C++</span>
+    <span class="badge">Qt</span>
+    <span class="badge">GUI Development</span>
+    <span class="badge">OOP</span>
+    <span class="badge">Desktop App</span>
+</div>
+</section>
+
+        <section>
+  <h2>Problem & Motivation</h2>
+  <p>
+    Traditional library record systems can be slow, manual, and prone to errors.
+    Libraries need a structured way to manage books, track borrowing, and update records
+    efficiently through an intuitive interface.
+  </p>
+</section>
+
+      <section>
+  <h2>Why I Built This Project</h2>
+  <p>
+    I built this project to learn how real desktop applications are designed and structured.
+    I wanted hands-on experience with GUI development, event-driven programming, and building
+    software that users interact with daily.
+  </p>
+  <p>
+    It also helped me strengthen object-oriented programming skills by separating the UI layer
+    from the application logic and managing updates across the system.
+  </p>
+</section>
+
+ <section>
+            <h2>Key Features</h2>
+            <ul>
+                <li>Add, edit, and delete books</li>
+                <li>Borrow and return books with status updates</li>
+                <li>Search for books by title or author</li>
+                <li>Dynamic GUI updates (book table, buttons, search results)</li>
+                <li>Built using Qt Widgets for desktop applications</li>
+            </ul>
+        </section>
+
+
+        <section>
+  <h2>Technologies Used</h2>
+  <ul>
+    <li>C++ (application logic and data handling)</li>
+    <li>Qt Widgets (GUI design and components)</li>
+    <li>Signals & Slots (event handling and UI interaction)</li>
+    <li>Object-Oriented Programming (structuring the system)</li>
+  </ul>
+</section>
+
+     <section>
+  <h2>Challenges Faced</h2>
+  <ul>
+    <li>Implementing reliable signals & slots without triggering duplicate updates</li>
+    <li>Keeping the UI state consistent when data changes (table refresh + button states)</li>
+    <li>Structuring the project to separate UI logic from core book management logic</li>
+  </ul>
+</section>
+
+
+<section>
+    <h2>What I Learned</h2>
+    <ul>
+        <li>How desktop applications are structured using Qt</li>
+        <li>Event-driven programming concepts</li>
+        <li>Separation between UI design and application logic</li>
+        <li>Real-world CRUD system implementation</li>
+    </ul>
+</section>
+
+<section>
+  <h2>Project Access</h2>
+  <p>
+    The complete source code for this project is hosted on GitHub:
+  </p>
+  <ul>
+    <li>
+      <strong>GitHub Repository:</strong>
+     <a href="https://github.com/Phumudzo2006/Qt-Library-Management-System"
+   target="_blank" rel="noopener noreferrer"
+   style="color:#38bdf8;">
+  View Source Code
+</a>
+
+    </li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>How to Run the Project</h2>
+  <pre>
+# Option A: Open in Qt Creator (Recommended)
+1) Clone the repo
+2) Open the .pro or CMakeLists.txt file in Qt Creator
+3) Build and Run
+
+# Option B: Clone from terminal
+git clone https://github.com/Phumudzo2006/Qt-Library-Management-System.git
+cd Qt-Library-Management-System
+  </pre>
+  <p>
+    Note: Build steps depend on whether the project uses qmake (.pro) or CMake.
+  </p>
+</section>
+
+
+        <section>
+  <h2>Demo Walkthrough (GUI)</h2>
+  <ul>
+    <li>User adds a new book using the “Add Book” form</li>
+    <li>Book appears immediately in the table (live refresh)</li>
+    <li>User searches by title/author and results update instantly</li>
+    <li>Borrow/Return changes the book status (Available ↔ Borrowed)</li>
+    <li>Buttons and table update automatically using signals & slots</li>
+  </ul>
+</section>
+
+
+        <section>
+    <h2>Future Improvements</h2>
+    <ul>
+        <li>Store data using a database (SQLite)</li>
+        <li>Add user authentication and roles</li>
+        <li>Generate reports for borrowed books</li>
+        <li>Modernize UI with Qt Quick / QML</li>
+    </ul>
+</section>
+
+
+        <section>
+            <a href="index.html" class="btn">← Back to Portfolio</a>
+        </section>
+    </main>
+</body>
+</html>

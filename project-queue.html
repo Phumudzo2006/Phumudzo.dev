@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Public Transport Queue System</title>
+
+  <meta name="description" content="C++ console simulation of a public transport queue system using queues, time-based events, and priority boarding. Built to demonstrate data structures, system modeling, and internship-ready problem solving." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+
+  <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background: linear-gradient(180deg, #0b0f14, #0f172a);
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: radial-gradient(circle at top, #1e293b, #0b0f14);
+      border-bottom: 1px solid #1f2937;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      max-width: 800px;
+      margin: 0.6rem auto 0;
+      color: #94a3b8;
+      font-size: 1.1rem;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 3rem 1.5rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+      padding: 2rem;
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      transition: 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+      border-color: #38bdf8;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #38bdf8;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    ul { padding-left: 1.2rem; }
+    ul li { margin-bottom: 0.5rem; color: #cbd5e1; }
+
+    p { color: #cbd5e1; }
+
+    .project-tech {
+      text-align: center;
+      margin-top: 1.2rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.4rem 0.9rem;
+      margin: 0.3rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #38bdf8;
+    }
+
+    pre {
+      background: #0f172a;
+      padding: 1.5rem;
+      border-radius: 12px;
+      overflow-x: auto;
+      border: 1px solid #1f2937;
+      color: #e2e8f0;
+      white-space: pre;
+    }
+
+    a { text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 1.8rem;
+      background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+      color: #0b0f14;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #38bdf8aa;
+      text-decoration: none;
+    }
+
+    .link {
+      color: #38bdf8;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      section { padding: 1.5rem; }
+    }
+  </style>
+</head>
+
+<body class="project"></body>
+  <header>
+    <h1>Public Transport Queue System</h1>
+    <p>
+      A console-based simulation that models passenger arrivals, priority boarding, and taxi departures using
+      queue-based scheduling and time-based events.
+    </p>
+    <p><strong>Built to strengthen my data structures and system modeling skills </strong></p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Project Overview</h2>
+      <p>
+        This project simulates a public transport boarding environment where passengers arrive over time and are assigned
+        to different taxi types. The system tracks queues, boarding, and departures, producing clear console logs to show
+        how scheduling decisions affect flow and efficiency.
+      </p>
+      <div class="project-tech">
+        <span class="badge">C++</span>
+        <span class="badge">STL</span>
+        <span class="badge">Queues</span>
+        <span class="badge">Simulation</span>
+        <span class="badge">OOP</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Why I Built This Project</h2>
+      <p>
+        I built this project to practice turning a real-world problem (crowded transport queues) into a structured software model.
+        I wanted hands-on experience with queues, time-based logic, and writing clean, testable simulation code.
+      </p>
+      <p>
+        It also helped me improve how I explain system behavior through logs—something that’s important when debugging and presenting results.
+      </p>
+    </section>
+
+    <section>
+      <h2>Problem Statement</h2>
+      <p>
+        In real public transport systems, unmanaged queues can cause delays, unfair boarding, and confusion—especially when
+        multiple vehicle types and passenger priorities exist. A structured queue-based approach can improve fairness and reduce congestion.
+      </p>
+      <p>
+        This simulation explores how queue rules, priorities, and vehicle capacity affect boarding efficiency and departure timing.
+      </p>
+    </section>
+
+    <section>
+      <h2>Technologies Used</h2>
+      <ul>
+        <li><strong>C++</strong> for core simulation logic</li>
+        <li><strong>STL containers</strong> (queue, vector) for managing passengers and state</li>
+        <li><strong>Object-Oriented Design</strong> for structuring passengers and taxis</li>
+        <li><strong>Console logging</strong> to visualize system events and debugging output</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Key Features</h2>
+      <ul>
+        <li>Multiple taxi types (e.g., S, L, C) with different queue behavior / capacity logic</li>
+        <li>Priority boarding rules based on passenger type</li>
+        <li>Time-based simulation loop (arrivals, boarding, departure events)</li>
+        <li>Clear console output showing the system state at each time step</li>
+        <li>Reusable, modular structure (easy to extend with new rules)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>My Role in the Project</h2>
+      <ul>
+        <li>Designed passenger + taxi structures and the overall simulation flow</li>
+        <li>Implemented queue management and priority boarding rules</li>
+        <li>Built the time-step event loop (arrivals → boarding → departures)</li>
+        <li>Created readable logs to trace decisions and debug the simulation</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Challenges Faced</h2>
+      <ul>
+        <li>Managing multiple queues at the same time while keeping the logic fair and consistent</li>
+        <li>Correctly synchronizing time-based events (arrivals, boarding time, and departure triggers)</li>
+        <li>Preventing edge-case bugs (e.g., boarding when a taxi is already full, or skipping passengers)</li>
+        <li>Designing console output that reflects the system state without becoming unreadable</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What I Learned</h2>
+      <ul>
+        <li>How queue-based scheduling models real-world systems (transport, call centers, service lines)</li>
+        <li>How to structure simulations with clear state transitions</li>
+        <li>How to use STL queues effectively and safely</li>
+        <li>How to debug logic-heavy programs using reliable logging</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Project Access</h2>
+      <p>
+        The complete source code for this project is hosted on GitHub:
+      </p>
+      <ul>
+        <li>
+          <strong>GitHub Repository:</strong>
+          <a class="link"
+             href="https://github.com/Phumudzo2006/PublicTransportQueue"
+             target="_blank"
+             rel="noopener noreferrer">
+            View Source Code
+          </a>
+        </li>
+      </ul>
+      <p>
+        This is a C++ console application and can be compiled locally using a standard C++ compiler.
+      </p>
+    </section>
+
+    <section>
+      <h2>How to Run the Project</h2>
+      <pre>
+git clone https://github.com/Phumudzo2006/PublicTransportQueue.git
+cd PublicTransportQueue
+
+# If your main file is main.cpp:
+g++ main.cpp -o transport
+./transport
+
+# If your project has multiple .cpp files:
+# g++ *.cpp -o transport
+# ./transport
+      </pre>
+      <p>
+        If your main file is not <code>main.cpp</code>, replace it with the correct filename (or use the <code>*.cpp</code> option).
+      </p>
+    </section>
+
+    <section>
+      <h2>Sample Output</h2>
+      <pre>
+PUBLIC TRANSPORT QUEUE SYSTEM
+-----------------------------
+Time: 0 | Arrivals: S0(3) L0(5)
+Taxi S: Boarding S0(3)
+Taxi L: Boarding L0(5)
+
+Time: 1 | Arrivals: C1(4)
+Taxi C: Boarding C1(4)
+
+Time: 5 | Taxi S FULL — Departing
+Time: 6 | Taxi L FULL — Departing
+Time: 7 | Taxi C FULL — Departing
+      </pre>
+    </section>
+
+    <section>
+      <h2>Future Improvements</h2>
+      <ul>
+        <li>Add a GUI dashboard (Qt) to visualize queues and departures in real time</li>
+        <li>Introduce analytics (average wait time, queue length over time, throughput)</li>
+        <li>Support configurable rules (capacity, priorities, boarding time) via a config file</li>
+        <li>Persist simulation results to file for reporting</li>
+      </ul>
+    </section>
+
+    <section>
+      <a href="index.html" class="btn">← Back to Portfolio</a>
+    </section>
+  </main>
+</body>
+</html>

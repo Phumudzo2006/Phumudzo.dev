@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vehicle Console App built in C++ using Object-Oriented Programming principles. Demonstrates vehicle management, data handling, and software design.">
+    <title>Vehicle Console App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(180deg, #0b0f14, #0f172a);
+        color: #e5e7eb;
+        line-height: 1.7;
+    }
+    header {
+        padding: 4rem 2rem;
+        text-align: center;
+        background: radial-gradient(circle at top, #1e293b, #0b0f14);
+        border-bottom: 1px solid #1f2937;
+    }
+    header h1 {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    header p {
+        max-width: 700px;
+        margin: auto;
+        color: #94a3b8;
+        font-size: 1.1rem;
+    }
+    main {
+        max-width: 1000px;
+        margin: auto;
+        padding: 3rem 1.5rem;
+    }
+    section {
+        margin-bottom: 2.5rem;
+        padding: 2rem;
+        background: #111827;
+        border: 1px solid #1f2937;
+        border-radius: 16px;
+        transition: 0.3s ease;
+    }
+    section:hover {
+        transform: translateY(-4px);
+        border-color: #38bdf8;
+    }
+    h2 {
+        margin-top: 0;
+        color: #38bdf8;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    ul {
+        padding-left: 1.2rem;
+    }
+    ul li {
+        margin-bottom: 0.5rem;
+        color: #cbd5e1;
+    }
+    p {
+        color: #cbd5e1;
+    }
+    .project-tech {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .badge {
+        display: inline-block;
+        padding: 0.4rem 0.9rem;
+        margin: 0.3rem;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        background: #1e293b;
+        border: 1px solid #334155;
+        color: #38bdf8;
+    }
+    pre {
+        background: #0f172a;
+        padding: 1.5rem;
+        border-radius: 12px;
+        overflow-x: auto;
+        border: 1px solid #1f2937;
+        color: #e2e8f0;
+    }
+    .btn {
+        display: inline-block;
+        padding: 0.9rem 1.8rem;
+        background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+        color: #0b0f14;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s ease;
+    }
+    .btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px #38bdf8aa;
+    }
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 2rem;
+        }
+        section {
+            padding: 1.5rem;
+        }
+    }
+    </style>
+</head>
+<body class="project">
+<header>
+    <h1>Vehicle Console App (C++)</h1>
+    <p>A console-based vehicle management system developed using C++ and Object-Oriented Programming principles.</p>
+    <p><strong>Built to strengthen my software engineering, problem-solving, and object-oriented programming skills.</strong></p>
+</header>
+<main>
+<section>
+    <h2>Project Overview</h2>
+    <p>
+        Vehicle Console App is a C++ console application designed to manage vehicle records through a
+        simple menu-driven interface. The project demonstrates object-oriented programming concepts,
+        data management, and user interaction through the command line.
+    </p>
+    <div class="project-tech">
+        <span class="badge">C++</span>
+        <span class="badge">OOP</span>
+        <span class="badge">Console Application</span>
+        <span class="badge">Data Structures</span>
+        <span class="badge">Software Development</span>
+    </div>
+</section>
+<section>
+    <h2>Problem & Motivation</h2>
+    <p>
+        Managing vehicle information manually can become inefficient and difficult as records grow.
+        This project provides a structured approach to storing, viewing, and managing vehicle data
+        while demonstrating core software engineering concepts.
+    </p>
+</section>
+<section>
+    <h2>Why I Built This Project</h2>
+    <p>
+        I created this project to strengthen my understanding of Object-Oriented Programming and
+        software design using C++.
+    </p>
+    <p>
+        The application allowed me to practice building a complete software solution that manages
+        data efficiently while maintaining clean, organized, and reusable code.
+    </p>
+</section>
+<section>
+    <h2>Key Features</h2>
+    <ul>
+        <li>Add vehicle records</li>
+        <li>View all registered vehicles</li>
+        <li>Search vehicle information</li>
+        <li>Menu-driven console interface</li>
+        <li>Object-oriented design using classes</li>
+        <li>Structured and maintainable codebase</li>
+    </ul>
+</section>
+<section>
+    <h2>Technologies Used</h2>
+    <ul>
+        <li>C++</li>
+        <li>Object-Oriented Programming (OOP)</li>
+        <li>Standard Template Library (STL)</li>
+        <li>Console-Based User Interface</li>
+    </ul>
+</section>
+<section>
+    <h2>Challenges Faced</h2>
+    <ul>
+        <li>Designing reusable class structures</li>
+        <li>Managing vehicle records efficiently</li>
+        <li>Creating a clear menu-driven workflow</li>
+        <li>Ensuring maintainable and readable code</li>
+    </ul>
+</section>
+<section>
+    <h2>What I Learned</h2>
+    <ul>
+        <li>Object-Oriented Programming principles</li>
+        <li>Class design and encapsulation</li>
+        <li>Data management techniques</li>
+        <li>Building complete console applications</li>
+        <li>Software engineering best practices</li>
+    </ul>
+</section>
+<section>
+    <h2>Project Access</h2>
+    <p>
+        The complete source code for this project is available on GitHub:
+    </p>
+    <ul>
+        <li>
+            <strong>GitHub Repository:</strong>
+            <a href="https://github.com/Phumudzo2006/Vehicle-Console-App"
+               target="_blank"
+               rel="noopener noreferrer"
+               style="color:#38bdf8;">
+                View Source Code
+            </a>
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>How to Run the Project</h2>
+<pre>
+# Clone Repository
+git clone https://github.com/Phumudzo2006/Vehicle-Console-App.git
+# Navigate into folder
+cd Vehicle-Console-App
+# Compile
+g++ *.cpp -o VehicleConsoleApp
+# Run
+./VehicleConsoleApp
+</pre>
+</section>
+<section>
+    <h2>Demo Walkthrough</h2>
+    <ul>
+        <li>Launch the application</li>
+        <li>Select an option from the main menu</li>
+        <li>Add vehicle information</li>
+        <li>Store and manage records</li>
+        <li>View existing vehicles</li>
+        <li>Search for vehicle information</li>
+        <li>Exit the application safely</li>
+    </ul>
+</section>
+<section>
+    <h2>Future Improvements</h2>
+    <ul>
+        <li>File-based data persistence</li>
+        <li>Database integration using SQLite</li>
+        <li>Advanced search and filtering</li>
+        <li>Vehicle maintenance tracking</li>
+        <li>Graphical user interface using Qt</li>
+        <li>Generate printable reports</li>
+    </ul>
+</section>
+<section>
+    <a href="index.html" class="btn">← Back to Portfolio</a>
+</section>
+</main>
+</body>
+</html>
